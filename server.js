@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 // set up templating engine
 app.set('view engine', 'ejs');
 
+
 // routing
 app.get('/', (req, res) => {
     res.render('home.ejs', {
