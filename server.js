@@ -46,11 +46,11 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
+app.get('/projects', (req, res) => {
     res.render('home.ejs', {
         pageTitle : 'Projects Page',
         welcomeMessage : 'welome on the projects page',
-        currYear : new Date().getFullYear();
+        currYear : new Date().getFullYear()
     });
 });
 
