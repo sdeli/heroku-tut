@@ -19,8 +19,8 @@ app.use(express.static(`${__dirname}/public-static-assets`));
 
 // create middleware
 app.use((req, res, next) => {
-    app.re
-    next()
+    // middleware body
+    next();
 });
 
 // set up templating engine
@@ -42,6 +42,14 @@ app.get('/about', (req, res) => {
         welcomeMessage : 'read about us',
         num : 3,
         currYear : new Date().getFullYear()
+    });
+});
+
+app.get('/', (req, res) => {
+    res.render('home.ejs', {
+        pageTitle : 'Projects Page',
+        welcomeMessage : 'welome on the projects page',
+        currYear : new Date().getFullYear();
     });
 });
 
